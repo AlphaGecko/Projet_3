@@ -1,0 +1,751 @@
+﻿#info_reservation, #container_reservation, #infoStation, #containerSignature, #info_reservation  {
+    background-color: white; 
+}
+
+p, input, button {
+    font-family: 'Courgette', cursive;
+    font-size: 16px;
+}
+
+#infoStation span, #info_reservation span {
+    color:  #306c94;
+}
+
+.black {
+    color: black; 
+}
+
+#prenom, #nom { 
+    color: #306c94;
+  }
+
+#container_application {
+    position: relative;
+    max-width: 1000px;
+    min-width: 1000px;
+    height: 1100px;
+    padding-top: 30px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-left: 10px; 
+    padding-right: 10px;
+    background: url('../images/background2.jpg'); 
+    background-position: bottom;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px 2px #333333;
+    border: 5px solid #333333;
+    border-radius: 50px;
+}
+
+#container_diaporama_anime {
+    visibility: visible; 
+    position: absolute; 
+    top: 30px; 
+    width: 98%;
+    left: 2%; 
+    height: 330px; 
+    perspective: 1000px;  
+}
+
+#container_diaporama_anime img {
+    position: absolute;
+    transition: left 2s ease-in-out, width 2s ease-in-out;  
+    height: 100%;
+    border: 3px groove black; 
+    box-shadow: 10px 15px 20px 3px #666666;
+    border-radius: 20%; 
+}
+
+#gauche img {
+    left: 0; 
+    width: 15%; 
+    transform: rotateY(60deg);
+    z-index: 0;
+}
+
+#gaucheMilieu img {
+    left: 7.5%; 
+    width: 25%; 
+    transform: rotateY(60deg);
+    z-index: 5;
+}
+
+#milieu img {
+    left: 30.5%; 
+    width: 35%; 
+    z-index: 10;
+}
+
+#droiteMilieu img {
+    left: 63.5%; 
+    width: 25%; 
+    transform: rotateY(300deg);
+    z-index: 5;
+}
+
+#droite img {
+    left: 82%; 
+    width: 15%;
+    transform: rotateY(300deg);
+    z-index: 0;
+}
+
+#container_play_pause {
+    width: 95%; 
+    display: flex; 
+    justify-content: center; 
+    font-size: 2.5em; 
+    position: absolute; 
+    top: 390px; 
+}
+
+#container_play_pause i {
+    margin-left: 5px; 
+}
+
+#container_play_pause :hover {
+    font-size: 1.1em;
+}
+
+
+/* Animations des rotation  */
+
+@keyframes rotate300To0 {
+    from {transform : rotateY(-60deg)}
+    to {transform : rotateY(0deg)}
+}
+
+@-webkit-keyframes rotate300To0 {
+    from {transform : rotateY(-60deg)}
+    to {transform : rotateY(0deg)}
+}
+
+@-o-keyframes rotate300To0 {
+    from {transform : rotateY(-60deg)}
+    to {transform : rotateY(0deg)}
+}
+
+@-moz-keyframes rotate300To0 {
+    from {transform : rotateY(-60deg)}
+    to {transform : rotateY(0deg)}
+}
+
+/**/
+
+@keyframes rotate60To0 {
+    from {transform : rotateY(60deg)}
+    to {transform : rotateY(0deg)}
+}
+
+@-webkit-keyframes rotate60To0 {
+    from {transform : rotateY(60deg)}
+    to {transform : rotateY(0deg)}
+}
+
+@-o-keyframes rotate60To0 {
+    from {transform : rotateY(60deg)}
+    to {transform : rotateY(0deg)}
+}
+
+@-moz-keyframes rotate60To0 {
+    from {transform : rotateY(60deg)}
+    to {transform : rotateY(0deg)}
+}
+
+/**/
+
+@keyframes rotate0To60 {
+    from {transform : rotateY(0deg)}
+    to {transform : rotateY(60deg)}
+}
+
+@-webkit-keyframes rotate60To0 {
+    from {transform : rotateY(0deg)}
+    to {transform : rotateY(60deg)}
+}
+
+@-o-keyframes rotate60To0 {
+    from {transform : rotateY(0deg)}
+    to {transform : rotateY(60deg)}
+}
+
+@-moz-keyframes rotate60To0 {
+    from {transform : rotateY(0deg)}
+    to {transform : rotateY(60deg)}
+}
+
+/**/
+
+@keyframes rotate60To300 {
+    from {transform : rotateY(60deg)}
+    to {transform : rotateY(-60deg)}
+}
+
+@-webkit-keyframes rotate60To300 {
+    from {transform : rotateY(60deg)}
+    to {transform : rotateY(-60deg)}
+}
+
+@-o-keyframes rotate60To300 {
+    from {transform : rotateY(60deg)}
+    to {transform : rotateY(-60deg)}
+}
+
+@-moz-keyframes rotate60To300 {
+    from {transform : rotateY(60deg)}
+    to {transform : rotateY(-60deg)}
+}
+
+/**/
+
+@keyframes rotate0To300 {
+    from {transform : rotateY(0deg)}
+    to {transform : rotateY(-60deg)}
+}
+
+@-webkit-keyframes rotate0To300 {
+    from {transform : rotateY(0deg)}
+    to {transform : rotateY(-60deg)}
+}
+
+@-o-keyframes rotate0To300 {
+    from {transform : rotateY(0deg)}
+    to {transform : rotateY(-60deg)}
+}
+
+@-moz-keyframes rotate0To300 {
+    from {transform : rotateY(0deg)}
+    to {transform : rotateY(-60deg)}
+}
+
+/**/
+
+@keyframes rotate300To60 {
+    from {transform : rotateY(-60deg)}
+    to {transform : rotateY(60deg)}
+}
+
+@-webkit-keyframes rotate300To60 {
+    from {transform : rotateY(-60deg)}
+    to {transform : rotateY(60deg)}
+}
+
+@-o-keyframes rotate300To60 {
+    from {transform : rotateY(-60deg)}
+    to {transform : rotateY(60deg)}
+}
+
+@-moz-keyframes rotate300To60 {
+    from {transform : rotateY(-60deg)}
+    to {transform : rotateY(60deg)}
+}
+
+
+/* Carte et reservation */
+
+#container_bas {
+    position: relative; 
+}
+
+#container_carte {
+    width: 55%;
+    height: 420px;
+    border: 3px solid #444444; 
+    border-radius: 10px;
+    position: absolute; 
+    top: 450px;
+    box-shadow: 0px 0px 8px 0.2px #555555;
+
+}
+
+#container_reservation {
+    position: absolute; 
+    right: 10px;
+    width: 40%;
+    height: 320px;
+    border: 3px solid  #444444; 
+    border-radius: 10px;
+    text-align: center;
+    top: 450px; 
+    box-shadow: 0px 0px 8px 0.2px #555555;
+}
+
+#infoStation {
+    visibility: hidden; 
+}
+
+.identite {
+    padding: 7px;
+    border: 3px solid  #444444;
+    border-radius: 10px;
+    width: 50%;
+    margin-bottom: 12px; 
+    text-align: center; 
+}
+
+/* Canvas */ 
+
+#containerSignature {
+    position: absolute; 
+    right: 10px; 
+    top: 780px; 
+    width: 40%; 
+    height: 300px; 
+    visibility: hidden; 
+    box-shadow: 0px 0px 8px 0.2px #555555;
+    border: 3px solid #444444; 
+    border-radius: 10px;
+}
+
+#signature {
+    position: absolute; 
+    right: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    margin: 0 0; 
+    padding: 0 0;
+}
+
+#effacer {
+    position: absolute; 
+    bottom: 5px; 
+    left: 10%; 
+    width: 20%; 
+}
+
+#valider {
+    position: absolute; 
+    bottom: 5px; 
+    left: 40%; 
+    width: 20%; 
+}
+
+#annuler {
+    position: absolute; 
+    bottom: 5px; 
+    right: 10%; 
+    width: 20%; 
+}
+
+#logo_signature {
+    position: absolute; 
+    left: 10px; 
+    top: 10px; 
+    width: 20%; 
+}
+
+#logo_signature img {
+    width: 50%; 
+    padding-right: 20px; 
+}
+
+#logo_signature p {
+    margin: 0 0; 
+    padding: 0 0; 
+}
+
+/* Reservation */
+
+#info_reservation {
+    visibility: hidden; 
+    position: absolute; 
+    top: 890px; 
+    left: 10px;
+    max-width: 53.2%;
+    min-width: 53.2%;
+    height: auto; 
+    padding: 10px; 
+    border: 3px groove #444444;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 0.2px #555555;
+}
+
+#annuler_reservation {
+    text-align: center; 
+}
+
+#velo {
+    position: absolute; 
+    bottom: 5px; 
+    right: 35%; 
+    width: 130px; 
+}
+
+
+
+
+
+
+/* Media queries */ 
+
+
+
+
+
+  
+@media screen and (max-width: 1024px) {
+
+    p, input, button {
+        font-size: 15px;
+    }
+    
+    #container_application {
+        max-width: 720px;
+        min-width: 720px;
+        height: 1000px;
+        padding-top: 30px; 
+        padding-left: 10px; 
+        padding-right: 10px;
+    }
+    
+    #container_diaporama_anime {
+        top: 30px; 
+        width: 98%;
+        left: 2%; 
+        height: 250px; 
+    }
+    
+    #container_play_pause {
+        font-size: 2.2em; 
+        position: absolute; 
+        top: 310px; 
+    }
+    
+    #container_play_pause i {
+        margin-left: 5px; 
+    }
+    
+    #container_play_pause :hover {
+        font-size: 1.05em;
+    }
+    
+    #container_carte {
+        width: 53%;
+        height: 380px;
+        top: 360px;
+    }
+    
+    #container_reservation {
+        right: 10px;
+        width: 40%;
+        height: 320px;
+        text-align: center;
+        top: 360px; 
+    }
+
+    .identite {
+        padding: 7px;
+        width: 50%;
+        margin-bottom: 12px; 
+        text-align: center; 
+    }
+    
+    /* Canvas */ 
+    
+    #containerSignature {
+        right: 10px; 
+        top: 700px; 
+        width: 40%; 
+        height: 300px; 
+    }
+
+    #effacer {
+        bottom: 5px; 
+        left: 10%; 
+        width: 25%; 
+    }
+    
+    #valider {
+        bottom: 5px; 
+        left: 38%; 
+        width: 25%; 
+    }
+    
+    #annuler {
+        bottom: 5px; 
+        right: 10%; 
+        width: 25%; 
+    }
+    
+    #logo_signature {
+        left: 10px; 
+        top: 10px; 
+        width: 20%; 
+    }
+    
+    #logo_signature img {
+        width: 50%; 
+        padding-right: 20px; 
+    }
+    
+    /* Reservation */
+    
+    #info_reservation {
+        top: 760px; 
+        left: 10px;
+        max-width: 51%;
+        min-width: 51%;
+        height: auto; 
+        padding: 10px; 
+    }
+    
+    #velo {
+        bottom: 5px; 
+        right: 10%; 
+        width: 130px; 
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    p, input, button {
+        font-size: 13px;
+    }
+    
+    #container_application {
+        max-width: 420px;
+        min-width: 420px;
+        height: 1400px;
+        padding-top: 30px; 
+        padding-left: 10px; 
+        padding-right: 10px;
+    }
+
+    #image1, #image2, #image4, #image5 {
+        display: none; 
+    }
+
+    #image3 {
+        position: absolute; 
+        left: 40px !important; 
+    }
+
+    
+    #container_diaporama_anime {
+        top: 30px; 
+        width: 220%;
+        right: 2%; 
+        height: 300px; 
+    }
+    
+    #container_play_pause {
+        font-size: 2.2em; 
+        position: absolute; 
+        top: 310px; 
+        display: none;
+    }
+    
+    #container_play_pause i {
+        margin-left: 5px; 
+    }
+    
+    #container_play_pause :hover {
+        font-size: 1.1em;
+    }
+    
+    #container_carte {
+        width: 80%;
+        height: 250px;
+        top: 360px;
+        left: 10%; 
+    }
+    
+    #container_reservation {
+        left: 10%;
+        width: 80%;
+        height: 280px;
+        text-align: center;
+        top: 630px; 
+    }
+
+    .identite {
+        padding: 7px;
+        width: 50%;
+        margin-bottom: 12px; 
+        text-align: center; 
+    }
+    
+    /* Canvas */ 
+    
+    #containerSignature {
+        left: 10%; 
+        top: 930px; 
+        width: 80%; 
+        height: 250px; 
+    }
+
+    #effacer {
+        bottom: 5px; 
+        left: 10%; 
+        width: 25%; 
+    }
+    
+    #valider {
+        bottom: 5px; 
+        left: 38%; 
+        width: 25%; 
+    }
+    
+    #annuler {
+        bottom: 5px; 
+        right: 10%; 
+        width: 25%; 
+    }
+    
+    #logo_signature {
+        left: 10px; 
+        top: 10px; 
+        width: 20%; 
+    }
+    
+    #logo_signature img {
+        width: 50%; 
+        padding-right: 20px; 
+    }
+    
+    /* Reservation */
+    
+    #info_reservation {
+        top: 1200px; 
+        left: 7%;
+        max-width: 82%;
+        min-width: 82%;
+        width: 82%; 
+        height: 180px; 
+        padding: 10px; 
+    }
+    
+    #velo {
+        bottom: 5px; 
+        right: 10%; 
+        width: 130px; 
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    p, input, button {
+        font-size: 13px;
+    }
+    
+    #container_application {
+        max-width: 300px;
+        min-width: 300px;
+        height: 1400px;
+        padding-top: 30px; 
+        padding-left: 10px; 
+        padding-right: 10px;
+    }
+
+    #image1, #image2, #image4, #image5 {
+        display: none; 
+    }
+
+    #image3 {
+        position: absolute; 
+        left: 30px !important; 
+    }
+
+    
+    #container_diaporama_anime {
+        top: 30px; 
+        width: 220%;
+        right: 2%; 
+        height: 300px; 
+    }
+    
+    #container_play_pause {
+        font-size: 2.2em; 
+        position: absolute; 
+        top: 310px; 
+        display: none;
+    }
+    
+    #container_play_pause i {
+        margin-left: 5px; 
+    }
+    
+    #container_play_pause :hover {
+        font-size: 1.1em;
+    }
+    
+    #container_carte {
+        width: 80%;
+        height: 250px;
+        top: 360px;
+        left: 10%; 
+    }
+    
+    #container_reservation {
+        left: 10%;
+        width: 80%;
+        height: 280px;
+        text-align: center;
+        top: 630px; 
+    }
+
+    .identite {
+        padding: 7px;
+        width: 50%;
+        margin-bottom: 12px; 
+        text-align: center; 
+    }
+    
+    /* Canvas */ 
+    
+    #containerSignature {
+        left: 10%; 
+        top: 930px; 
+        width: 80%; 
+        height: 250px; 
+    }
+
+    #effacer {
+        bottom: 5px; 
+        left: 10%; 
+        width: 25%; 
+    }
+    
+    #valider {
+        bottom: 5px; 
+        left: 38%; 
+        width: 25%; 
+    }
+    
+    #annuler {
+        bottom: 5px; 
+        right: 10%; 
+        width: 25%; 
+    }
+    
+    #logo_signature {
+        left: 10px; 
+        top: 10px; 
+        width: 20%; 
+    }
+    
+    #logo_signature img {
+        width: 50%; 
+        padding-right: 20px; 
+    }
+    
+    /* Reservation */
+    
+    #info_reservation {
+        top: 1200px; 
+        left: 7%;
+        max-width: 82%;
+        min-width: 82%;
+        width: 82%; 
+        height: 180px; 
+        padding: 10px; 
+    }
+    
+    #velo {
+        bottom: 5px; 
+        right: 10%; 
+        width: 130px; 
+    }
+}
+  

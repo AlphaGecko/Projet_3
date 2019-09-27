@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Projet_3</title>
+
+        <!-- Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Bibilotèque font awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+        <!-- leafletjs -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <!-- google font-->
+        <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+        <!-- Feuille de style -->
+        <link rel="stylesheet" href="css/style.css" media="screen"  />
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="images/logo.png" />
+    </head>
+
+    <body>   
+        <div id="container_application">
+            <div id="container_diaporama_anime">
+                <span id="gauche">
+                    <a>
+                        <img alt="Mode d'emploi" src="images/1.jpg" id="image1" />
+                    </a>
+                </span>
+                <span id="gaucheMilieu">
+                    <a >
+                        <img alt="Mode d'emploi" src="images/2.jpg" id="image2" />
+                    </a>
+                </span>
+                <span id="milieu">
+                    <a >
+                        <img alt="Mode d'emploi" src="images/3.jpg" id="image3" />
+                    </a>
+                </span>
+                <span id="droiteMilieu">
+                    <a >
+                        <img alt="Mode d'emploi" src="images/4.jpg" id="image4" />
+                    </a>
+                </span>
+                <span id="droite">
+                    <a >
+                        <img alt="Mode d'emploi" src="images/5.jpg" id="image5" />
+                    </a>
+                </span>  
+            </div>
+
+            <div id="container_play_pause">
+                <span class="lecture" id="lecture">
+                    <i class="far fa-play-circle"></i>
+                </span>
+                <span class="pause" id="pause">
+                    <i class="far fa-pause-circle"></i>
+                </span>
+            </div>
+
+            
+            <div id="containeur_bas">
+
+                <div id="container_carte"></div>
+                <div id="info_reservation">
+                    <p>
+                        Vélo réservé à la station <span id="adresse_reservation"></span> par <span id="prenom_reservation"></span> <span id="nom_reservation"></span> <br /> <br />
+                        Temps restant : 
+                        <span id="timer">
+                            <span id="minutes"></span> min 
+                            <span id="secondes"></span> s
+                        </span>
+                        <img alt="Velo reservé !" src="./images/bike.gif" id="velo" />
+                    </p>
+                    <p>
+                        <input class="pure-button" id="annuler_reservation" type="button" name="annuler_reservation" value="Annuler" />
+                    </p>  
+                </div>
+
+                <div id="container_reservation">
+                    <span id="choisir">
+                        <p>
+                            Veuillez choisir une station
+                        </p>
+                    </span>
+
+                    <span id="infoStation">
+                        <p>Adresse : <span id="adresse">...</span></p>
+                        <p><span id="places">...</span> places</p>
+                        <p><span id="velosDispo">...</span> vélos disponibles</p>
+                        <span>
+                            <p class="black"> nom : 
+                                <input type="text" name="nom" maxlength="15" class="identite" id="nom" placeholder="Nom"/>
+                            </p>
+                            <p class="black"> prénom : 
+                                <input type="text" name="prenom" maxlength="15" class="identite" id="prenom" placeholder="Prénom" />
+                            </p>
+                            <p>
+                                <input class="pure-button" id="reserver" type="button" name="reserver" value="Réserver"  />
+                            </p>  
+                        </span>
+                    </span>                  
+                </div>
+            </div>
+            
+            <span id="containerSignature">
+                <div id="logo_signature">
+                    <img src="images/signature.png"></img>
+                    <p>signature</p>
+                </div> 
+                <canvas id="signature"></canvas>
+                <img id="signature_utilisateur" />
+                <input class="pure-button" id="effacer" type="button" value="Effacer" />
+                <input class="pure-button" id="valider" type="button" value="Valider" />
+                <input class="pure-button" id="annuler" type="button" value="Annuler" />
+            </span>
+        </div>
+        
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" 
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" 
+        crossorigin=""></script>
+        <script src="js/canvasSignature.js"></script>
+        <script src="js/compteARebours.js"></script>
+        <script src="js/diaporama.js"></script>
+        <script src="js/getStation.js"></script>
+        <script src="js/isValid.js"></script>
+        <script src="js/webStorage.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
